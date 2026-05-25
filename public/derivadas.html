@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2: Derivadas | UMG</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <nav class="navbar-pro">
+        <div class="nav-container">
+           <div class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
+                <img src="img/logo-umg.png" alt="Logo UMG" style="height: 50px; width: auto; object-fit: contain;">
+                <span class="brand-text">Cálculo I - UMG</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="limites.html">Unidad 1: Límites</a>
+                <a href="derivadas.html" style="color: var(--primary); font-weight: 700;">Unidad 2: Básicas</a>
+                <a href="avanzadas.html" >Unidad 3: Avanzadas</a>
+                <a href="recursos.html">Recursos</a>
+            </div>
+            <a href="faq.html" class="btn-primary">Dudas Frecuentes</a>
+        </div>
+    </nav>
+
+    <header class="hero-unidad">
+        <div class="container">
+            <span class="badge-unidad b-derivadas">UNIDAD 2</span>
+            <h1 class="hero-title text-gradient">Cálculo Diferencial</h1>
+            <p class="hero-subtitle">Domina las reglas de oro de la derivación: teoremas fundamentales, producto, cociente y regla de la cadena.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h2 class="section-title">📐 Derivadas Básicas</h2>
+        <section class="card-teoria">
+            <h3>¿Qué es una derivada?</h3>
+            <p>La derivada representa la <strong>tasa de cambio instantánea</strong> de una función.</p>
+            <div class="formula-box">
+                \[ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \]
+            </div>
+            
+            <h3 class="mt-3">Reglas Fundamentales</h3>
+            <div class="ejemplo-box">
+                <p><strong>Regla de la potencia:</strong> \( \frac{d}{dx}[x^n] = n \cdot x^{n-1} \)</p>
+                <p><strong>Regla de la constante:</strong> \( \frac{d}{dx}[c] = 0 \)</p>
+                <p><strong>Regla de la suma:</strong> \( \frac{d}{dx}[f+g] = f' + g' \)</p>
+                <p><strong>Constante por función:</strong> \( \frac{d}{dx}[c \cdot f(x)] = c \cdot f'(x) \)</p>
+            </div>
+        </section>
+
+        <div class="bento-grid">
+            <div class="bento-card">
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 1</h3>
+                    <p><strong>Enunciado:</strong> \( f(x) = 4x^3 - 2x^2 + 5x - 3 \)</p>
+                    <div class="solucion-box">
+                        <p><strong>Solución paso a paso:</strong></p>
+                        <p>\[ f'(x) = 4 \cdot 3x^{2} - 2 \cdot 2x^{1} + 5 \cdot 1x^{0} - 0 \]</p>
+                        <p>\[ f'(x) = 12x^2 - 4x + 5 \]</p>
+                    </div>
+                    <div class="video-placeholder">🎥 VIDEO - [Nombre del integrante]</div>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 2</h3>
+                    <p><strong>Enunciado:</strong> \( f(x) = \frac{5}{x^2} + \sqrt{x} - 7 \)</p>
+                    <div class="solucion-box">
+                        <p><strong>Solución:</strong></p>
+                        <p>\[ f'(x) = -\frac{10}{x^3} + \frac{1}{2\sqrt{x}} \]</p>
+                    </div>
+                    <div class="video-placeholder">🎥 VIDEO - [Nombre del integrante]</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title mt-5">✖️ Regla del Producto</h2>
+        <section class="card-teoria">
+            <p>Para derivar el producto de dos funciones:</p>
+            <div class="formula-box">
+                \[ \frac{d}{dx}[f(x) \cdot g(x)] = f'(x) \cdot g(x) + f(x) \cdot g'(x) \]
+            </div>
+        </section>
+
+        <div class="bento-grid">
+            <div class="bento-card">
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 1</h3>
+                    <p><strong>Enunciado:</strong> \( f(x) = x^2 \cdot \sin(x) \)</p>
+                    <div class="solucion-box">
+                        <p><strong>Solución:</strong></p>
+                        <p>\[ f'(x) = 2x \cdot \sin(x) + x^2 \cdot \cos(x) \]</p>
+                    </div>
+                    <div class="video-placeholder">🎥 VIDEO - [Nombre del integrante]</div>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 2</h3>
+                    <p><strong>Enunciado:</strong> \( f(x) = (3x^2 + 1) \cdot e^x \)</p>
+                    <div class="solucion-box">
+                        <p><strong>Solución:</strong></p>
+                        <p>\[ f'(x) = 6x \cdot e^x + (3x^2 + 1) \cdot e^x = e^x(3x^2 + 6x + 1) \]</p>
+                    </div>
+                    <div class="video-placeholder">🎥 VIDEO - [Nombre del integrante]</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title mt-5">➗ Regla del Cociente</h2>
+        <section class="card-teoria">
+            <p>Para derivar el cociente de dos funciones:</p>
+            <div class="formula-box">
+                \[ \frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{[g(x)]^2} \]
+            </div>
+        </section>
+
+        <div class="bento-grid">
+            <div class="bento-card">
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 1</h3>
+                    <p><strong>Enunciado:</strong> \( f(x) = \frac{x^2}{x+1} \)</p>
+                    <div class="solucion-box">
+                        <p><strong>Solución:</strong></p>
+                        <p>\[ f'(x) = \frac{2x(x+1) - x^2(1)}{(x+1)^2} = \frac{x^2 + 2x}{(x+1)^2} \]</p>
+                    </div>
+                    <div class="video-placeholder">🎥 VIDEO - [Nombre del integrante]</div>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 2</h3>
+                    <p><strong>Enunciado:</strong> \( f(x) = \frac{\sin(x)}{x^2} \)</p>
+                    <div class="solucion-box">
+                        <p><strong>Solución:</strong></p>
+                        <p>\[ f'(x) = \frac{\cos(x) \cdot x^2 - \sin(x) \cdot 2x}{x^4} = \frac{x\cos(x) - 2\sin(x)}{x^3} \]</p>
+                    </div>
+                    <div class="video-placeholder">🎥 VIDEO - [Nombre del integrante]</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title mt-5">⛓️ Regla de la Cadena</h2>
+        
+        <section class="card-teoria">
+            <h3>¿Cuándo usarla?</h3>
+            <p>Se utiliza cuando tenemos una <strong>función compuesta</strong> (una función dentro de otra función). Su fórmula general es:</p>
+            <div class="formula-box" style="text-align: center;">
+                \[ \frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x) \]
+            </div>
+            <p class="nota-ingenieria text-center mt-3">💡 <strong>"Derivar afuera, evaluar en adentro, multiplicar por derivada de adentro"</strong></p>
+
+            <h3 class="mt-5">📝 Procedimiento Paso a Paso</h3>
+            <ul class="lista-pasos mt-3">
+                <li><strong>Paso 1:</strong> Identificar la función externa \( g(u) \) y la interna \( h(x) \).</li>
+                <li><strong>Paso 2:</strong> Derivar la función externa → \( g'(u) \).</li>
+                <li><strong>Paso 3:</strong> Derivar la función interna → \( h'(x) \).</li>
+                <li><strong>Paso 4:</strong> Multiplicar: \( g'(h(x)) \cdot h'(x) \).</li>
+                <li><strong>Paso 5:</strong> Simplificar.</li>
+            </ul>
+        </section>
+
+        <div class="bento-grid">
+            <div class="bento-card">
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 1</h3>
+                    <p><strong>Enunciado:</strong> \( f(x) = (2x^2 + 3)^5 \)</p>
+                    <div class="solucion-box">
+                        <p><strong>Paso 4 (Regla de la cadena):</strong></p>
+                        <p>\[ f'(x) = 5(2x^2 + 3)^4 \cdot 4x \]</p>
+                        <p><strong>✅ Respuesta:</strong> \( f'(x) = 20x(2x^2 + 3)^4 \)</p>
+                    </div>
+                    <div class="video-placeholder">🎥 VIDEO - Integrante 1</div>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 2</h3>
+                    <p><strong>Enunciado:</strong> \( f(x) = \sin(3x^2) \)</p>
+                    <div class="solucion-box">
+                        <p><strong>Paso 4 (Regla de la cadena):</strong></p>
+                        <p>\[ f'(x) = \cos(3x^2) \cdot 6x \]</p>
+                        <p><strong>✅ Respuesta:</strong> \( f'(x) = 6x \cos(3x^2) \)</p>
+                    </div>
+                    <div class="video-placeholder">🎥 VIDEO - Integrante 2</div>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 3</h3>
+                    <p><strong>Enunciado:</strong> \( f(x) = e^{x^3 - 2x} \)</p>
+                    <div class="solucion-box">
+                        <p><strong>Paso 4 (Regla de la cadena):</strong></p>
+                        <p>\[ f'(x) = e^{x^3 - 2x} \cdot (3x^2 - 2) \]</p>
+                        <p><strong>✅ Respuesta:</strong> \( f'(x) = (3x^2 - 2) e^{x^3 - 2x} \)</p>
+                    </div>
+                    <div class="video-placeholder">🎥 VIDEO - Integrante 3</div>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 4</h3>
+                    <p><strong>Enunciado:</strong> \( f(x) = \sqrt{5x^4 + 2} \)</p>
+                    <div class="solucion-box">
+                        <p><strong>Paso 4 (Regla de la cadena):</strong></p>
+                        <p>\[ f'(x) = \frac{1}{2\sqrt{5x^4 + 2}} \cdot 20x^3 \]</p>
+                        <p><strong>✅ Respuesta:</strong> \( f'(x) = \frac{10x^3}{\sqrt{5x^4 + 2}} \)</p>
+                    </div>
+                    <div class="video-placeholder">🎥 VIDEO - Integrante 4</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Facultad de Ingeniería en Sistemas | Primer Semestre 2026</p>
+        <p style="margin-top: 10px; opacity: 0.7;">Equipo Colaborativo: Andy Valdes, Gerson Recinos, Angel Vasquez, Erick Solorzano</p>
+    </footer>
+
+</body>
+</html>
