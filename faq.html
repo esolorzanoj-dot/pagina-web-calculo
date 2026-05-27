@@ -17,9 +17,8 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">Inicio</a>
-                <a href="limites.html">Unidad 1: Límites</a>
-                <a href="derivadas.html">Unidad 2: Básicas</a>
-                <a href="avanzadas.html">Unidad 3: Avanzadas</a>
+                <a href="derivadas.html">Derivadas Básicas</a>
+                <a href="avanzadas.html">Regla de la Cadena</a>
                 <a href="recursos.html">Recursos</a>
             </div>
             <a href="faq.html" class="btn-primary" style="background-color: var(--primary);">Dudas Frecuentes</a>
@@ -34,39 +33,18 @@
 
     <main class="container">
         
-        <h2 class="section-title">Dudas por Temática</h2>
+        <h2 class="section-title">Dudas Frecuentes</h2>
 
         <section class="bento-grid">
-            
-            <div class="bento-card" style="flex-direction: column;">
-                <div class="w-100">
-                    <span class="tag tag-red">Unidad 1</span>
-                    <h3 class="mt-3">Límites al Infinito (Grupo 1)</h3>
-                    <ul class="lista-pasos mt-3">
-                        <li style="margin-bottom: 15px;">
-                            <strong>❓ ¿Cómo saber si una función tiene asíntota horizontal?</strong><br>
-                            <span style="color: var(--text-muted); font-size: 0.95rem;">Respuesta: Cuando el límite de \( f(x) \) cuando \( x \to \infty \) da como resultado un número real.</span>
-                        </li>
-                        <li>
-                            <strong>❓ ¿Qué hago cuando el límite da infinito?</strong><br>
-                            <span style="color: var(--text-muted); font-size: 0.95rem;">Respuesta: Significa que la función crece sin límite o que existe una asíntota vertical en ese punto.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="bento-card" style="flex-direction: column;">
+            <div class="bento-card card-large" style="flex-direction: column;">
                 <div class="w-100">
-                    <span class="tag tag-blue">Unidad 2</span>
-                    <h3 class="mt-3">Reglas Básicas (Grupos 2 y 3)</h3>
+                    <span class="tag tag-red">Pregunta 1</span>
+                    <h3 class="mt-3">Límites infinitos con división de raíz</h3>
                     <ul class="lista-pasos mt-3">
-                        <li style="margin-bottom: 15px;">
-                            <strong>❓ ¿Cuándo uso regla del producto?</strong><br>
-                            <span style="color: var(--text-muted); font-size: 0.95rem;">Respuesta: Cuando tienes DOS funciones con la variable \( x \) MULTIPLICÁNDOSE.</span>
-                        </li>
                         <li>
-                            <strong>❓ ¿Cuándo uso regla del cociente?</strong><br>
-                            <span style="color: var(--text-muted); font-size: 0.95rem;">Respuesta: Cuando tienes una función DIVIDIDA por otra función.</span>
+                            <strong>❓ Los límites infinitos con división de raíz son difíciles de comprender. ¿Cómo se resuelven?</strong><br>
+                            <span style="color: var(--text-muted); font-size: 0.95rem;">Una de las formas más fáciles para eliminar una raíz es dividiendo cada elemento del numerador y del denominador por su término dominante. A los elementos que queden "con una X abajo" simplemente se les aplica infinito, haciendo que se conviertan en 0, debido a la regla en la que todo número real dividido por infinito da como resultado 0.</span>
                         </li>
                     </ul>
                 </div>
@@ -74,46 +52,83 @@
 
             <div class="bento-card card-large" style="flex-direction: column;">
                 <div class="w-100">
-                    <span class="tag tag-blue">Unidad 2</span>
-                    <h3 class="mt-3">Regla de la Cadena (Grupo 4)</h3>
+                    <span class="tag tag-red">Pregunta 2</span>
+                    <h3 class="mt-3">¿Cuándo usar el método de factorización?</h3>
                     <ul class="lista-pasos mt-3">
-                        <li style="margin-bottom: 15px;">
-                            <strong>❓ ¿Cuándo uso regla de la cadena?</strong><br>
-                            <span style="color: var(--text-muted); font-size: 0.95rem;">Respuesta: Cuando tienes una función DENTRO de otra función (funciones compuestas).</span>
-                        </li>
                         <li>
-                            <strong>❓ ¿Cómo identificar la función interna y externa?</strong><br>
-                            <span style="color: var(--text-muted); font-size: 0.95rem;">Respuesta: La última operación matemática que harías si evaluaras un número, es la función externa.</span>
+                            <strong>❓ ¿En qué tipo de límites es necesario usar el método de factorización?</strong><br>
+                            <span style="color: var(--text-muted); font-size: 0.95rem;">Por norma general, el método de factorización puede utilizarse en funciones que presenten una indeterminación del tipo 0/0. Sin embargo, en estos casos también puede utilizarse el método de factor común, que en muchos casos es aún más sencillo. Por ejemplo, si al evaluar una función resulta en 0/0, se puede sacar factor común en el numerador para cancelar términos y resolver el límite.</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="bento-card" style="flex-direction: column;">
+            <div class="bento-card card-large" style="flex-direction: column;">
                 <div class="w-100">
-                    <span class="tag tag-purple">Unidad 3</span>
-                    <h3 class="mt-3">Implícitas (Grupo 5)</h3>
+                    <span class="tag tag-blue">Pregunta 3</span>
+                    <h3 class="mt-3">¿Cómo identificar y resolver una discontinuidad?</h3>
                     <ul class="lista-pasos mt-3">
                         <li>
-                            <strong>❓ ¿Cuándo uso derivación implícita?</strong><br>
-                            <span style="color: var(--text-muted); font-size: 0.95rem;">Respuesta: Cuando no puedo despejar fácilmente \( y \) en términos de \( x \) (es decir, aislar \( y = f(x) \)).</span>
+                            <strong>❓ ¿Cómo puedo identificar y resolver una discontinuidad en una función?</strong><br>
+                            <span style="color: var(--text-muted); font-size: 0.95rem;">Para que una función sea continua debe cumplir 3 requisitos:</span>
+                            <ul style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px; padding-left: 20px;">
+                                <li style="margin-bottom: 8px;">Que la función exista en ese punto.</li>
+                                <li style="margin-bottom: 8px;">Que los límites al evaluarlos sean iguales tanto por la izquierda como por la derecha.</li>
+                                <li>Que el límite y el valor de la función sean iguales.</li>
+                            </ul>
+                            <span style="color: var(--text-muted); font-size: 0.95rem; display: block; margin-top: 10px;">Si al menos uno de estos requisitos no se cumple, la función es discontinua y podrá resolverse por medio de factorización, aunque no todas las funciones discontinuas pueden solucionarse con este método.</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="bento-card" style="flex-direction: column;">
+            <div class="bento-card card-large" style="flex-direction: column;">
                 <div class="w-100">
-                    <span class="tag tag-purple">Unidad 3</span>
-                    <h3 class="mt-3">Log. y Exp. (Grupo 6)</h3>
+                    <span class="tag tag-blue">Pregunta 4</span>
+                    <h3 class="mt-3">¿Cómo encontrar la pendiente con raíz?</h3>
                     <ul class="lista-pasos mt-3">
                         <li>
-                            <strong>❓ ¿Cuál es la derivada de ln(x) y e^x?</strong><br>
-                            <span style="color: var(--text-muted); font-size: 0.95rem; display: block; margin-top: 10px;">
-                                Respuesta:<br><br>
-                                \( \frac{d}{dx}[\ln(x)] = \frac{1}{x} \)<br><br>
-                                \( \frac{d}{dx}[e^x] = e^x \)
-                            </span>
+                            <strong>❓ ¿Cómo puedo encontrar la pendiente cuando una función tiene raíz?</strong><br>
+                            <span style="color: var(--text-muted); font-size: 0.95rem;">Uno de los métodos más utilizados es calcular la derivada. La forma más segura es olvidarse de la raíz y transformarla en un exponente fraccionario usando la propiedad \( \sqrt{x} = x^{1/2} \). Una vez aplicada, puede utilizarse la regla de la potencia o la regla de la cadena para resolverla. Al finalizar, el exponente derivado debe volver a su estado de raíz.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bento-card card-large" style="flex-direction: column;">
+                <div class="w-100">
+                    <span class="tag tag-purple">Pregunta 5</span>
+                    <h3 class="mt-3">¿Cómo saber qué regla de derivación usar?</h3>
+                    <ul class="lista-pasos mt-3">
+                        <li>
+                            <strong>❓ ¿Cómo puedo saber qué regla de derivación usar y aplicarla correctamente?</strong><br>
+                            <span style="color: var(--text-muted); font-size: 0.95rem;">Las reglas de derivación no se eligen al azar; dependiendo de la estructura de la función se aplicará una regla específica:</span>
+                            <table style="margin-top: 15px; width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                                <tr style="background: var(--color-background-secondary);">
+                                    <th style="padding: 8px 12px; text-align: left; border: 1px solid var(--color-border-tertiary);">Función</th>
+                                    <th style="padding: 8px 12px; text-align: left; border: 1px solid var(--color-border-tertiary);">Regla</th>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px 12px; border: 1px solid var(--color-border-tertiary);">Una suma o resta</td>
+                                    <td style="padding: 8px 12px; border: 1px solid var(--color-border-tertiary);"><strong>Regla de la suma/resta</strong></td>
+                                </tr>
+                                <tr style="background: var(--color-background-secondary);">
+                                    <td style="padding: 8px 12px; border: 1px solid var(--color-border-tertiary);">Una variable con exponente</td>
+                                    <td style="padding: 8px 12px; border: 1px solid var(--color-border-tertiary);"><strong>Regla de la potencia</strong></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px 12px; border: 1px solid var(--color-border-tertiary);">Dos expresiones multiplicándose</td>
+                                    <td style="padding: 8px 12px; border: 1px solid var(--color-border-tertiary);"><strong>Regla del producto</strong></td>
+                                </tr>
+                                <tr style="background: var(--color-background-secondary);">
+                                    <td style="padding: 8px 12px; border: 1px solid var(--color-border-tertiary);">Una fracción</td>
+                                    <td style="padding: 8px 12px; border: 1px solid var(--color-border-tertiary);"><strong>Regla del cociente</strong></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px 12px; border: 1px solid var(--color-border-tertiary);">Una función dentro de otra</td>
+                                    <td style="padding: 8px 12px; border: 1px solid var(--color-border-tertiary);"><strong>Regla de la cadena</strong></td>
+                                </tr>
+                            </table>
                         </li>
                     </ul>
                 </div>
