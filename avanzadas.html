@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidad 3 - Derivadas Avanzadas | UMG</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <title>Regla de la Cadena | Calketh²</title>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
@@ -13,13 +16,12 @@
         <div class="nav-container">
             <div class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
                 <img src="img/logo-umg.png" alt="Logo UMG" style="height: 50px; width: auto; object-fit: contain;">
-                <span class="brand-text">Cálculo I - UMG</span>
+                <span class="brand-text">Calketh² - UMG</span>
             </div>
             <div class="nav-links">
                 <a href="index.html">Inicio</a>
-                <a href="limites.html">Unidad 1: Límites</a>
-                <a href="derivadas.html">Unidad 2: Básicas</a>
-                <a href="avanzadas.html" style="color: var(--primary); font-weight: 700;">Unidad 3: Avanzadas</a>
+                <a href="derivadas.html">Derivadas Básicas</a>
+                <a href="avanzadas.html" style="color: var(--primary); font-weight: 700;">Regla de la Cadena</a>
                 <a href="recursos.html">Recursos</a>
             </div>
             <a href="faq.html" class="btn-primary">Dudas Frecuentes</a>
@@ -27,148 +29,103 @@
     </nav>
 
     <header class="hero-unidad">
-        <span class="badge-unidad" style="background-color: #9333ea;">UNIDAD 3</span>
-        <h1 class="hero-title text-gradient">Derivadas Avanzadas</h1>
-        <p class="hero-subtitle">Derivación Implícita, Logarítmica y Exponencial.</p>
-        
-        <div class="team-flex mt-3" style="justify-content: center;">
-            <span class="team-member">👤 Grupo 5 (Implícitas)</span>
-            <span class="team-member">👤 Grupo 6 (Log y Exp)</span>
+        <div class="container">
+            <span class="badge-unidad" style="background-color: #9333ea;">TEMA 2</span>
+            <h1 class="hero-title text-gradient">Regla de la Cadena</h1>
+            <p class="hero-subtitle">Derivación de funciones compuestas paso a paso.</p>
         </div>
     </header>
 
     <main class="container">
 
-        <h2 class="section-title">1. Derivadas Implícitas</h2>
-        
+        <h2 class="section-title">📘 Concepto</h2>
         <section class="card-teoria">
-            <h3>¿Cuándo se utilizan?</h3>
-            <p>Se usan cuando la variable dependiente \( y \) <strong>no está despejada</strong> en función de \( x \). En lugar de intentar despejarla (lo cual a veces es imposible), derivamos ambos lados de la ecuación.</p>
-            
-            <h4 class="mt-3">Procedimiento paso a paso:</h4>
-            <ul class="lista-pasos mt-3">
-                <li><strong>Paso 1:</strong> Derivar ambos lados de la ecuación con respecto a \( x \).</li>
-                <li><strong>Paso 2:</strong> Cada vez que derives un término que contenga \( y \), debes multiplicar por \( \frac{dy}{dx} \) (por la regla de la cadena).</li>
-                <li><strong>Paso 3:</strong> Agrupar todos los términos que contengan \( \frac{dy}{dx} \) en un lado de la igualdad.</li>
-                <li><strong>Paso 4:</strong> Factorizar y despejar \( \frac{dy}{dx} \).</li>
-            </ul>
-        </section>
+            <p>La Regla de la Cadena es una de las herramientas más poderosas del cálculo diferencial. Sirve para <strong>derivar funciones compuestas</strong> (es decir, una función que está dentro de otra función, a menudo llamadas "funciones cebolla").</p>
+            <p class="mt-3">Imagina que tienes una función \( f(g(x)) \). La regla de la cadena nos dice que, para derivarla, debemos <strong>derivar la función externa</strong> manteniendo lo de adentro igual, y luego <strong>multiplicarlo por la derivada de la función interna</strong>.</p>
 
-        <section class="bento-grid">
-            <div class="bento-card" style="flex-direction: column;">
-                <div class="w-100">
-                    <span class="tag tag-blue">Ejercicio 1</span>
-                    <h3 class="mt-3">Circunferencia</h3>
-                    <p><strong>Enunciado:</strong> Calcular la derivada de \( x^2 + y^2 = 25 \)</p>
-                    
-                    <div class="solucion-box">
-                        <strong>Solución:</strong><br>
-                        Derivamos ambos lados:<br>
-                        \( 2x + 2y \cdot \frac{dy}{dx} = 0 \)<br><br>
-                        Despejamos \( \frac{dy}{dx} \):<br>
-                        \( 2y \cdot \frac{dy}{dx} = -2x \)<br>
-                        \( \frac{dy}{dx} = -\frac{x}{y} \)
-                    </div>
-                </div>
-                <div class="video-placeholder w-100">
-                    🎥 VIDEO EXPLICATIVO<br>
-                    <small>Por: [Nombre del integrante]</small>
-                </div>
-            </div>
-
-            <div class="bento-card" style="flex-direction: column;">
-                <div class="w-100">
-                    <span class="tag tag-blue">Ejercicio 2</span>
-                    <h3 class="mt-3">Folio de Descartes</h3>
-                    <p><strong>Enunciado:</strong> Calcular la derivada de \( x^3 + y^3 = 6xy \)</p>
-                    
-                    <div class="solucion-box">
-                        <strong>Solución:</strong><br>
-                        \( 3x^2 + 3y^2 \cdot \frac{dy}{dx} = 6y + 6x \cdot \frac{dy}{dx} \)<br><br>
-                        Agrupamos \( \frac{dy}{dx} \):<br>
-                        \( \frac{dy}{dx}(3y^2 - 6x) = 6y - 3x^2 \)<br><br>
-                        Despejamos:<br>
-                        \( \frac{dy}{dx} = \frac{6y - 3x^2}{3y^2 - 6x} = \frac{2y - x^2}{y^2 - 2x} \)
-                    </div>
-                </div>
-                <div class="video-placeholder w-100">
-                    🎥 VIDEO EXPLICATIVO<br>
-                    <small>Por: [Nombre del integrante]</small>
-                </div>
-            </div>
-        </section>
-
-
-        <h2 class="section-title mt-5">2. Derivadas Logarítmicas y Exponenciales</h2>
-
-        <section class="card-teoria">
-            <h3>Fórmulas Clave</h3>
-            <p>Estas fórmulas son fundamentales para derivar funciones que crecen o decrecen de forma exponencial, o que involucran logaritmos.</p>
-            
+            <h3 class="mt-3">Notación estándar</h3>
+            <p>Matemáticamente, si \( y = f(g(x)) \), su derivada se define de la siguiente manera:</p>
             <div class="formula-box">
-                <p>1. Función Exponencial Natural: &nbsp; \( \frac{d}{dx}[e^x] = e^x \)</p>
-                <p>2. Función Exponencial Base \(a\): &nbsp; \( \frac{d}{dx}[a^x] = a^x \ln(a) \)</p>
-                <p>3. Logaritmo Natural: &nbsp; \( \frac{d}{dx}[\ln(x)] = \frac{1}{x} \)</p>
-                <p>4. Logaritmo Base \(a\): &nbsp; \( \frac{d}{dx}[\log_a(x)] = \frac{1}{x \ln(a)} \)</p>
+                \[ \frac{dy}{dx} = f'(g(x)) \cdot g'(x) \]
             </div>
-            <p class="nota-ingenieria mt-3"><strong>Nota:</strong> Recuerda que siempre debes aplicar la <em>Regla de la Cadena</em> si el argumento no es simplemente \( x \).</p>
+
+            <h3 class="mt-3">Notación de Leibniz</h3>
+            <p>Alternativamente, utilizando la notación de Leibniz, si \( y \) depende de una variable intermedia \( u \), y a su vez \( u \) depende de \( x \):</p>
+            <div class="formula-box">
+                \[ \frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} \]
+            </div>
         </section>
 
-        <section class="bento-grid">
+        <h2 class="section-title mt-5">📝 Procedimiento Paso a Paso</h2>
+        <section class="card-teoria">
+            <p>Para abordar con éxito cualquier derivada que requiera la aplicación de la Regla de la Cadena, se recomienda seguir un método estructurado de cuatro pasos:</p>
+            <ul class="lista-pasos mt-3">
+                <li><strong>Paso 1 — Identificar las capas:</strong> Determinar con precisión cuál es la función externa y cuál es la función interna.</li>
+                <li><strong>Paso 2 — Derivar la función externa:</strong> Aplicar la regla de derivación correspondiente a la función de afuera, manteniendo el argumento interno exactamente igual.</li>
+                <li><strong>Paso 3 — Derivar la función interna:</strong> Calcular de forma independiente la derivada de la expresión que se encuentra dentro.</li>
+                <li><strong>Paso 4 — Multiplicar y simplificar:</strong> Unir los resultados de los pasos 2 y 3 mediante una multiplicación y simplificar algebraicamente.</li>
+            </ul>
+            <p class="nota-ingenieria mt-3">💡 <strong>"Derivar afuera, dejar adentro igual, multiplicar por la derivada de adentro."</strong></p>
+        </section>
+
+        <h2 class="section-title mt-5">✏️ Ejercicios Resueltos</h2>
+
+        <div class="bento-grid">
             <div class="bento-card" style="flex-direction: column;">
-                <div class="w-100">
-                    <span class="tag tag-purple">Ejercicio 1</span>
-                    <h3 class="mt-3">Exponencial con Cadena</h3>
-                    <p><strong>Enunciado:</strong> \( f(x) = e^{x^2} \)</p>
-                    
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 1</h3>
+                    <p><strong>Enunciado:</strong> \( y = (7x^3 - 4x)^2 \)</p>
                     <div class="solucion-box">
-                        <strong>Solución:</strong><br>
-                        \( f'(x) = e^{x^2} \cdot \frac{d}{dx}(x^2) \)<br>
-                        \( f'(x) = 2x e^{x^2} \)
+                        <p><strong>Solución:</strong></p>
+                        <p>Función externa: \( (\cdot)^2 \) → Derivada: \( 2(\cdot)^1 \)</p>
+                        <p>Función interna: \( 7x^3 - 4x \) → Derivada: \( 21x^2 - 4 \)</p>
+                        <p class="mt-3"><strong>✅ Resultado:</strong></p>
+                        \[ y' = 2(7x^3 - 4x)(21x^2 - 4) \]
                     </div>
-                </div>
-                <div class="video-placeholder w-100">
-                    🎥 VIDEO EXPLICATIVO<br>
-                    <small>Por: [Nombre del integrante]</small>
                 </div>
             </div>
 
             <div class="bento-card" style="flex-direction: column;">
-                <div class="w-100">
-                    <span class="tag tag-purple">Ejercicio 2</span>
-                    <h3 class="mt-3">Logaritmo Natural</h3>
-                    <p><strong>Enunciado:</strong> \( f(x) = \ln(3x^2 + 1) \)</p>
-                    
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 2</h3>
+                    <p><strong>Enunciado:</strong> \( y = \dfrac{1}{(7x^5 - x^4 + 2)^{10}} \)</p>
                     <div class="solucion-box">
-                        <strong>Solución:</strong><br>
-                        \( f'(x) = \frac{1}{3x^2 + 1} \cdot \frac{d}{dx}(3x^2 + 1) \)<br>
-                        \( f'(x) = \frac{6x}{3x^2 + 1} \)
+                        <p><strong>Solución:</strong> Reescribimos como \( y = (7x^5 - x^4 + 2)^{-10} \)</p>
+                        <p>Función externa: \( (\cdot)^{-10} \) → Derivada: \( -10(\cdot)^{-11} \)</p>
+                        <p>Función interna: \( 7x^5 - x^4 + 2 \) → Derivada: \( 35x^4 - 4x^3 \)</p>
+                        <p class="mt-3"><strong>✅ Resultado:</strong></p>
+                        \[ y' = \frac{-10(35x^4 - 4x^3)}{(7x^5 - x^4 + 2)^{11}} \]
                     </div>
-                </div>
-                <div class="video-placeholder w-100">
-                    🎥 VIDEO EXPLICATIVO<br>
-                    <small>Por: [Nombre del integrante]</small>
                 </div>
             </div>
 
             <div class="bento-card card-large" style="flex-direction: column;">
-                <div class="w-100">
-                    <span class="tag tag-purple">Ejercicio 3</span>
-                    <h3 class="mt-3">Exponencial Base a</h3>
-                    <p><strong>Enunciado:</strong> \( f(x) = 2^{3x} \)</p>
-                    
+                <div class="card-info w-100">
+                    <h3>✏️ Ejercicio 3</h3>
+                    <p><strong>Enunciado:</strong> \( y = (9x^3 + 1)^2 \sin(5x) \)</p>
                     <div class="solucion-box">
-                        <strong>Solución:</strong><br>
-                        \( f'(x) = 2^{3x} \cdot \ln(2) \cdot \frac{d}{dx}(3x) \)<br>
-                        \( f'(x) = 2^{3x} \cdot 3 \cdot \ln(2) \)
+                        <p><strong>Solución:</strong> Aplicamos regla del producto + cadena</p>
+                        <p>Derivada del primer factor: \( 2(9x^3 + 1) \cdot 27x^2 = 54x^2(9x^3 + 1) \)</p>
+                        <p>Derivada del segundo factor: \( \cos(5x) \cdot 5 = 5\cos(5x) \)</p>
+                        <p class="mt-3"><strong>✅ Resultado:</strong></p>
+                        \[ y' = 54x^2(9x^3 + 1)\sin(5x) + 5(9x^3 + 1)^2\cos(5x) \]
                     </div>
                 </div>
-                <div class="video-placeholder w-100">
-                    🎥 VIDEO EXPLICATIVO<br>
-                    <small>Por: [Nombre del integrante]</small>
-                </div>
             </div>
-        </section>
+        </div>
+
+        <h2 class="section-title mt-5">🎥 Videos Explicativos</h2>
+        <div class="bento-grid">
+            <div class="bento-card" style="flex-direction: column;">
+                <div class="video-placeholder w-100">🎥 VIDEO - Integrante 1</div>
+            </div>
+            <div class="bento-card" style="flex-direction: column;">
+                <div class="video-placeholder w-100">🎥 VIDEO - Integrante 2</div>
+            </div>
+            <div class="bento-card" style="flex-direction: column;">
+                <div class="video-placeholder w-100">🎥 VIDEO - Integrante 3</div>
+            </div>
+        </div>
 
     </main>
 
